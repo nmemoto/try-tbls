@@ -1,0 +1,20 @@
+{
+    "name": "try-tbls",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "work",
+    "remoteUser": "vscode",
+    "workspaceFolder": "/workspace",
+    "postStartCommand": "bash .devcontainer/postStartCommand.sh",
+    "extensions": [
+        "ms-ossdata.vscode-postgresql"
+    ],
+    "features": {
+        "github-cli": "latest"
+    },
+    "remoteEnv": {
+        "PGUSER": "postgres",
+        "PGPASSWORD": "postgres",
+        "PGHOST": "db",
+        "PGDATABASE": "postgres"
+    }
+}
